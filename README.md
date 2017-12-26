@@ -1,2 +1,3 @@
 # Program_Blog-WebApp
-## Incomplete and Unstable
+## Finally complete!
+### But needs edits and minor bug fixes and features
