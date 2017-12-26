@@ -4,11 +4,7 @@ function loadUpdateForm() {
             <h4>Update credentials</h4>
 			<div>
 				<form>
-				<input type="text" id="username" placeholder="Username"/>
-				<br><br>
 				<input type="password" placeholder="Password" id="password"/>
-				<br><br>
-				<input type="email" placeholder="username@host.com" id="email"/>
 				<br><br>
 				<input value="Update Credentials" type="submit" id="updateCred_btn"/>
 				</form>
@@ -49,10 +45,8 @@ submit.onclick = function () {
             }
         };
 
-        var username=document.getElementById('username').value;
-		var email=document.getElementById('email').value;
         var password = document.getElementById('password').value;
         request.open('POST', '/credentials_update', true);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({username: username, password: password, email: email}));
+        request.send(JSON.stringify({password: password}));
     };

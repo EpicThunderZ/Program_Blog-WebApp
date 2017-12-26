@@ -52,6 +52,7 @@
 }
 #programs{
     overflow: auto;
+	height: 550%;
 }
 .commentBoxPar{
     text-align: center;
@@ -63,6 +64,7 @@ body{
     font-family: 'Lato';
     font-weight: light;
     overflow-y: auto;
+	background: #E6E6E6;
 }
 .container{
     overflow: auto;
@@ -137,15 +139,15 @@ font-family: monospace;
     text-align: center !important;
 }
 #titlebar{
-  position: absolute;
-  left: 0px;
-  top: -1px;
-  height: 110px;
-  width: 100%;
-  background-color: white;
-  position: fixed;
-  border: 1px solid gray;
-
+	height: 15%;
+	width: 100%;
+	background-color: black;
+	position: fixed;
+	border: 1px solid gray;
+	border-radius: 5px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
 }
 #ProfileB{
   position: absolute;
@@ -157,16 +159,16 @@ font-family: monospace;
 #SignUpB{
   position: absolute;
   top: 60px;
-  width: 250px;
+  width: 240px;
   height: 50px;
-  left: 0px;
+  left: -3px;
 }
 #LoginB{
   position: absolute;
   top: 60px;
-  width: 250px;
+  width: 240px;
   height: 50px;
-  left: 250px;
+  left: 245px;
 }
 #SignUpB, #LoginB, #ProfileB{
   color: blue;
@@ -213,7 +215,7 @@ border-radius: 2px;
 
 .dropdown {
 position: absolute;
-top: 0px;
+top: 5px;
 display: inline-block;
 margin-left: 20px;
 }

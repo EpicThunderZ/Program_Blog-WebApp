@@ -6,9 +6,13 @@ function loadLoggedInUser(login, username, password, email) {
         <h3><i> ${username} </i></h3>
 		<br>
 		<form>
+		<P>
+		Username:
 		<input type="text" id='username' value='${username}' class = 'cred' disabled>
 		<br><br>
+		Password:
 		<input type="email" id='email' value='${email}' class = 'cred' disabled>
+		</P>
 		<br><br>
 		<a href="/dir-settings"><button style='font-size: 0.8em; height: 30px;'>Edit</button></a>
 		</form>

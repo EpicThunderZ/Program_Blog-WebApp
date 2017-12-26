@@ -8,7 +8,7 @@ var session = require('express-session');
 var nodemailer=require('nodemailer');
 var generator = require('generate-password');
 var config = require('./config');
-console.log(process.env);
+
 var pool = mysql.createConnection({
     user: 'root',
     host: 'localhost',
@@ -42,11 +42,7 @@ var dir = {
 				<h4>Update credentials</h4>
 			<div>
 				<form>
-				<input type="text" id="username" placeholder="Username"/> 
-				<br><br>
 				<input type="password" placeholder="Password" id="password"/>
-				<br><br>
-				<input type="email" placeholder="username@host.com" id="email"/>
 				<br><br>
 				<input value="Update Credentials" type="submit" id="updateCred_btn"/>
 				</form>
@@ -346,7 +342,7 @@ app.post('/send-password_email', function(req, res) {
 				});
 				var hashedPassword=hash(password, salt);
 				var mailOptions = {
-				  from: transporter.auth.user,
+				  from: process.env.EMAIL_AUTH_USER,
 				  to: email.toString(),
 				  subject: 'Your password',
 				  text: "This is your new password for your account: '"+password+"' "
@@ -388,7 +384,7 @@ app.post('/credentials_update', function(req, res) {
 				var dbString = result[0].password;
 				var salt = dbString.split('$')[2];
 				var hashedPassword = hash(req.body.password, salt);
-				pool.query("UPDATE `user` SET `password` = ? WHERE `username` = ?",[req.body.username,req.session.auth.userId], function(err, result, field) {
+				pool.query("UPDATE `user` SET `password` = ? WHERE `username` = ?",[hashedPassword,req.session.auth.userId], function(err, result, field) {
 					if(err) {
 						res.send(err);
 					} else {

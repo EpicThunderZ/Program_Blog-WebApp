@@ -22,7 +22,7 @@ function showCom(tag) {
 							<div class="commentTime"> - ${(commentsData[i].date)} </div>
                         </div>
 						
-                    </div><br>`;
+                    </div><br><br>`;
                 }
 				content+=`<hr>`;
                 console.log(content);
@@ -41,7 +41,7 @@ function openComBox(tag) {
 	var comments = document.getElementById('comments_'+tag);
 	comments.innerHTML=`
                         <div class="commentBoxPar" id="${tag}_CommentBoxPar">
-                            <TEXTAREA id="${tag}_commentBox" style="overflow:auto; width: 70%; height: 100%; max-width: 70%; max-height: 100%; min-width: 70%; min-height: 100%;" class="commentBox"> </TEXTAREA>
+                            <TEXTAREA id="${tag}_commentBox" style="overflow:auto; width: 70%; height: 10%; max-width: 70%; max-height: 20%; min-width: 70%; min-height: 20%;" class="commentBox"> </TEXTAREA>
                         </div>
 
                         <div class="commentDiv" id="${tag}_CommentDiv">
