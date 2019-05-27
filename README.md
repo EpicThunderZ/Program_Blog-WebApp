@@ -1,5 +1,5 @@
 # Program_Blog-WebApp
-## :white_check_mark: Successfully Complete!
+
 ## :warning: Bugs
 
 ### Introduction
