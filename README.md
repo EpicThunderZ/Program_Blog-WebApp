@@ -3,7 +3,7 @@
 ## :warning: Bugs
 
 ### Introduction
-Blog App Interface. Advanced version of imad_app-MySQL(https://github.com/EpicThunderZ/IMAD_App-MySQL)
+Blog App Interface. Advanced version of imad_app-MySQL(https://github.com/EpicThunderZ/IMAD_App-MySQL). Meant for blogging programs.
 
 ### Online Imports: 
 - Bootstrap
