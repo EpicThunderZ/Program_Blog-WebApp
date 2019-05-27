@@ -1,6 +1,6 @@
 # Program_Blog-WebApp
 ## :white_check_mark: Successfully Complete!
-## :warning Bugs
+## :warning: Bugs
 
 ### Introduction
 Blog App Interface. Advanced version of imad_app-MySQL(https://github.com/EpicThunderZ/IMAD_App-MySQL)
